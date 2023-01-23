@@ -1,0 +1,11 @@
+~/navigation<br>
+$ <a routerLink="/">Home</a><br>
+$ <a routerLink="/map">Map</a><br>
+<br>
+~/account<br>
+<ng-container *ngIf="!isLoggedIn">
+  $ <a (click)="login()">Login</a><br>
+</ng-container>
+<ng-container *ngIf="isLoggedIn">
+  $ <a (click)="logout()">Logout</a><br>
+</ng-container>

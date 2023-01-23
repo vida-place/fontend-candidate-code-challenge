@@ -1,0 +1,58 @@
+/* Add application styles & imports to this file! */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~highlight.js/styles/github.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+
+html {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 16px;
+  color: #0f0;
+  background-color: #000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+a {
+  color: #0f0;
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1900px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1300px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 700px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 10px;
+  }
+}

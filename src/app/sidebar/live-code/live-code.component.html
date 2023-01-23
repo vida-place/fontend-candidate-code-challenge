@@ -1,0 +1,6 @@
+<ng-container *ngIf="!closed">
+  <div class="close" (click)="closeConsole($event)">x</div>
+
+  <textarea name="code" [(ngModel)]="code" (keyup)="updateCode($event)" #textarea></textarea>
+  <pre><code [highlight]="code" [languages]="['xml', 'scss', 'typescript']"></code></pre>
+</ng-container>

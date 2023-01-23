@@ -1,0 +1,26 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'sidebar content'
+    'sidebar footer';
+  grid-template-rows: 10rem 1fr 2rem;
+  grid-template-columns: 12rem 1fr;
+  height: 100vh;
+}
+
+app-header {
+  grid-area: header;
+}
+
+app-sidebar {
+  grid-area: sidebar;
+}
+
+app-content {
+  grid-area: content;
+}
+
+app-footer {
+  grid-area: footer;
+}

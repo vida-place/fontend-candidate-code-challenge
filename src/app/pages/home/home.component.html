@@ -1,0 +1,278 @@
+<h1>Well done {{ name }}, the app works!</h1>
+<b>Here are your tasks:</b><br />
+<small>Click on them to mark them as complete.</small>
+<ul>
+  <li [class.checked]="checkedItems.has(100)" (click)="toggleChecked(100)">
+    Explain the functional sizing of the sidebar on the left. How does it work with the media queries?
+  </li>
+  <li [class.checked]="checkedItems.has(201) && checkedItems.has(202) && checkedItems.has(203)">
+    Explain the questions within the following files:
+    <ul>
+      <li [class.checked]="checkedItems.has(201)" (click)="toggleChecked(201)">src/app/header/header.component.ts</li>
+      <li [class.checked]="checkedItems.has(202)" (click)="toggleChecked(202)">src/app/pages/home/home.component.ts</li>
+      <li [class.checked]="checkedItems.has(203)" (click)="toggleChecked(203)">src/app/pages/map/map.component.ts</li>
+    </ul>
+  </li>
+  <li>
+    Mark the correct statements and explain shortly:
+    <ul class="select">
+      <li [class.selected]="checkedItems.has(301)" (click)="toggleChecked(301)">
+        Components should have as many input/output dependencies on each other as possible to share data with each other.
+      </li>
+      <li [class.selected]="checkedItems.has(302)" (click)="toggleChecked(302)">
+        Each component must have a decorator.
+      </li>
+      <li [class.selected]="checkedItems.has(303)" (click)="toggleChecked(303)">
+        Interceptor's are a way for caching certain data.
+      </li>
+      <li [class.selected]="checkedItems.has(304)" (click)="toggleChecked(304)">
+        ALL modules always need to be imported in app.module.ts.
+      </li>
+      <li [class.selected]="checkedItems.has(305)" (click)="toggleChecked(305)">
+        Services are responsible for displaying forms.
+      </li>
+      <li [class.selected]="checkedItems.has(306)" (click)="toggleChecked(306)">
+        With a Angular pipe you can change/manipulate data display.
+      </li>
+      <li [class.selected]="checkedItems.has(307)" (click)="toggleChecked(307)">
+        Directives shouldn't be used, because they are performance-reducing.
+      </li>
+      <li [class.selected]="checkedItems.has(308)" (click)="toggleChecked(308)">
+        Standalone components always need a module.
+      </li>
+      <li [class.selected]="checkedItems.has(309)" (click)="toggleChecked(309)">
+        HTML DOM size does matter regarding performance.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Choose your preferred filetree structure (there are four suggestions):
+    <ul class="choose">
+      <li [class.choosen]="checkedItems.has(401)" (click)="toggleChecked(401, true)">
+        <pre>
+app
+├── app-routing.module.ts
+├── app.component.html
+├── app.component.scss
+├── app.component.ts
+├── app.module.ts
+├── blog-comments.component.html
+├── blog-comments.component.scss
+├── blog-comments.component.ts
+├── blog-thread.component.html
+├── blog-thread.component.scss
+├── blog-thread.component.ts
+├── blog.component.html
+├── blog.component.scss
+├── blog.component.ts
+├── blog.service.ts
+├── filter.pipe.ts
+├── footer.component.html
+├── footer.component.scss
+├── footer.component.ts
+├── header.component.html
+├── header.component.scss
+├── header.component.ts
+├── imprint.component.html
+├── imprint.component.scss
+├── imprint.component.ts
+├── privacy.component.html
+├── privacy.component.scss
+├── privacy.component.ts
+├── sidebar.component.html
+├── sidebar.component.scss
+└── sidebar.component.ts
+        </pre>
+      </li>
+      <li [class.choosen]="checkedItems.has(402)" (click)="toggleChecked(402, true)">
+        <pre>
+app
+├── app-routing.module.ts
+├── app.component.html
+├── app.component.scss
+├── app.component.ts
+├── app.module.ts
+├── blog
+│   ├── blog.component.html
+│   ├── blog.component.scss
+│   └── blog.component.ts
+├── blog-comments
+│   ├── blog-comments.component.html
+│   ├── blog-comments.component.scss
+│   └── blog-comments.component.ts
+├── blog-thread
+│   ├── blog-thread.component.html
+│   ├── blog-thread.component.scss
+│   └── blog-thread.component.ts
+├── blog.service.ts
+├── filter.pipe.ts
+├── footer
+│   ├── footer.component.html
+│   ├── footer.component.scss
+│   └── footer.component.ts
+├── header
+│   ├── header.component.html
+│   ├── header.component.scss
+│   └── header.component.ts
+├── imprint
+│   ├── imprint.component.html
+│   ├── imprint.component.scss
+│   └── imprint.component.ts
+├── privacy
+│   ├── privacy.component.html
+│   ├── privacy.component.scss
+│   └── privacy.component.ts
+└── sidebar
+    ├── sidebar.component.html
+    ├── sidebar.component.scss
+    └── sidebar.component.ts
+        </pre>
+      </li>
+      <li [class.choosen]="checkedItems.has(403)" (click)="toggleChecked(403, true)">
+        <pre>
+app
+├── app-routing.module.ts
+├── app.component.html
+├── app.component.scss
+├── app.component.spec.ts
+├── app.component.ts
+├── app.module.ts
+├── footer
+│   ├── footer.component.html
+│   ├── footer.component.scss
+│   └── footer.component.ts
+├── header
+│   ├── header.component.html
+│   ├── header.component.scss
+│   └── header.component.ts
+├── pages
+│   ├── blog
+│   │   ├── blog.component.html
+│   │   ├── blog.component.scss
+│   │   ├── blog.component.ts
+│   │   ├── comments
+│   │   │   ├── comments.component.html
+│   │   │   ├── comments.component.scss
+│   │   │   └── comments.component.ts
+│   │   └── thread
+│   │       ├── thread.component.html
+│   │       ├── thread.component.scss
+│   │       └── thread.component.ts
+│   ├── imprint
+│   │   ├── imprint.component.html
+│   │   ├── imprint.component.scss
+│   │   └── imprint.component.ts
+│   └── privacy
+│       ├── privacy.component.html
+│       ├── privacy.component.scss
+│       └── privacy.component.ts
+├── shared
+│   ├── pipes
+│   │   └── filter
+│   │       └── filter.pipe.ts
+│   └── services
+│       └── blog
+│           └── blog.service.ts
+└── sidebar
+    ├── sidebar.component.html
+    ├── sidebar.component.scss
+    └── sidebar.component.ts
+        </pre>
+      </li>
+      <li [class.choosen]="checkedItems.has(404)" (click)="toggleChecked(404, true)">
+        <pre>
+app
+├── footer
+│   ├── html
+│   │   └── footer.component.html
+│   ├── scss
+│   │   └── footer.component.scss
+│   └── typescript
+│       └── footer.component.ts
+├── header
+│   ├── html
+│   │   └── header.component.html
+│   ├── scss
+│   │   └── header.component.scss
+│   └── typescript
+│       └── header.component.ts
+├── html
+│   └── app.component.html
+├── pages
+│   ├── blog
+│   │   ├── comments
+│   │   │   ├── html
+│   │   │   │   └── comments.component.html
+│   │   │   ├── scss
+│   │   │   │   └── comments.component.scss
+│   │   │   └── typescript
+│   │   │       └── comments.component.ts
+│   │   ├── html
+│   │   │   └── blog.component.html
+│   │   ├── scss
+│   │   │   └── blog.component.scss
+│   │   ├── thread
+│   │   │   ├── html
+│   │   │   │   └── thread.component.html
+│   │   │   ├── scss
+│   │   │   │   └── thread.component.scss
+│   │   │   └── typescript
+│   │   │       └── thread.component.ts
+│   │   └── typescript
+│   │       └── blog.component.ts
+│   ├── imprint
+│   │   ├── html
+│   │   │   └── imprint.component.html
+│   │   ├── scss
+│   │   │   └── imprint.component.scss
+│   │   └── typescript
+│   │       └── imprint.component.ts
+│   └── privacy
+│       ├── html
+│       │   └── privacy.component.html
+│       ├── scss
+│       │   └── privacy.component.scss
+│       └── typescript
+│           └── privacy.component.ts
+├── scss
+│   └── app.component.scss
+├── shared
+│   ├── pipes
+│   │   └── filter
+│   │       └── typescript
+│   │           └── filter.pipe.ts
+│   └── services
+│       └── blog
+│           └── typescript
+│               └── blog.service.ts
+├── sidebar
+│   ├── html
+│   │   └── sidebar.component.html
+│   ├── scss
+│   │   └── sidebar.component.scss
+│   └── typescript
+│       └── sidebar.component.ts
+└── typescript
+    ├── app-routing.module.ts
+    ├── app.component.spec.ts
+    ├── app.component.ts
+    └── app.module.ts
+        </pre>
+      </li>
+    </ul>
+  </li>
+  <li [class.checked]="checkedItems.has(500)" (click)="toggleChecked(500)">
+    When clicking on "Logout", we want the user to be redirect to the "Home" component. Please implement this.
+  </li>
+  <li [class.checked]="checkedItems.has(600)" (click)="toggleChecked(600)">
+    Looks like we have a bug in our MapComponent which could lead to a performance issue. Help us to find and fix it.
+  </li>
+  <li [class.checked]="checkedItems.has(700)" (click)="toggleChecked(700)">
+    Create a guard that will prohibit loading the route "/map" when not logged in.
+  </li>
+  <li [class.checked]="checkedItems.has(800)" (click)="toggleChecked(800)">
+    Optional: The "Map" page shows just a part of a static map image. It would be nice if
+    we can scroll through the whole map by just moving the mouse on the x and y
+    axis inside the host component.
+  </li>
+</ul>

@@ -1,0 +1,15 @@
+:host {
+  color: #fff;
+  padding: 0 0.5rem;
+  border-right: 1px dashed #fff;
+}
+
+a {
+  margin: 0.25rem 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(225, 225, 225, 0.35);
+  }
+}
